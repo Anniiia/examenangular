@@ -1,0 +1,14 @@
+<div style="width: 50%; margin: 0 auto;">
+    <h1>LOGIN</h1>
+    <form #insertForm="ngForm">        
+        <label>Email</label>
+        <input type="text" class="form-control" #cajanombre name="cajanombre"/>
+        <label>Constraseña</label>
+        <input type="password" class="form-control" #cajacontrasenia name="cajacontrasenia"/><br/>   
+        <button class="btn btn-success" (click)="login()">
+            Login
+        </button>
+    </form><br/>
+    <p *ngIf="mensaje" style="color:red">{{mensaje}}</p>
+    
+</div>

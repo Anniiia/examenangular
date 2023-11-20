@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;" *ngIf="cubo!=null" >
+    <h2 class="card-title">{{cubo.nombre}}</h2>
+    <img :src="cubo.imagen" style="width:150px; height: 150px;" class="card-img-top"/>
+    <h3>{{cubo.modelo}}</h3>
+    <p>{{cubo.marca}}</p>
+    <p>Color: {{cubo.color}}</p>
+    <p>Precio: {{cubo.precio}} €</p>
+</div>
+<div>
+    <h3>Comentarios :</h3>
+    <div *ngIf="comentarios!=null" style="width: 50%;">
+        <ul *ngFor="let comentario of comentarios">
+            <li>{{comentario.fechaComentario}}    {{comentario.comentario}}</li>
+        </ul>
+    </div>
+</div>
